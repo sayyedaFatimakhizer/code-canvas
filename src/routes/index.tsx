@@ -394,52 +394,104 @@ function Portfolio() {
         <div className="container">
           <div className="section-header">
             <span className="section-label">UI / UX Design</span>
-            <h2 className="section-title">Design <span className="accent">Case Study</span></h2>
+            <h2 className="section-title">Design <span className="accent">Case Studies</span></h2>
             <div className="section-line" />
           </div>
 
-          <div className="uiux-banner">
-            <div className="uiux-banner-top">
-              <div>
-                <span className="uiux-tag">Mobile + Web · HCI Project</span>
-                <h3>GO RIDE — AI-Assisted Ride Booking</h3>
-                <p>
-                  An end-to-end ride-booking experience with an integrated AI assistant — designed for two distinct user roles (driver &amp; passenger) across mobile and web. Every screen was crafted to keep the flow effortless, from onboarding to checkout.
-                </p>
+          {/* Case Study 01 — GO RIDE */}
+          <div className="case-study">
+            <div className="uiux-banner">
+              <div className="uiux-banner-top">
+                <div>
+                  <span className="uiux-tag">Case Study 01 · Mobile + Web · HCI</span>
+                  <h3>GO RIDE — AI-Assisted Ride Booking</h3>
+                  <p>
+                    An end-to-end ride-booking experience with an integrated AI assistant — designed for two distinct user roles (driver &amp; passenger) across mobile and web. Every screen was crafted to keep the flow effortless, from onboarding to checkout.
+                  </p>
+                </div>
+                <a className="figma-btn" href="https://www.figma.com/design/EbZrBez1bkJWGbhpwN9eXn/ride-booking-with-Ai-assistance?node-id=0-1" target="_blank" rel="noreferrer">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M5 3h14v18l-7-4-7 4z"/></svg>
+                  Open in Figma
+                </a>
               </div>
-              <a className="figma-btn" href="https://www.figma.com/design/EbZrBez1bkJWGbhpwN9eXn/ride-booking-with-Ai-assistance?node-id=0-1" target="_blank" rel="noreferrer">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M5 3h14v18l-7-4-7 4z"/></svg>
-                Open in Figma
-              </a>
+            </div>
+
+            <div className="process-row">
+              {[
+                ["01","Research","Interviewed riders & drivers to map pain points around safety, fare clarity and trip booking."],
+                ["02","Wireframes","Low-fi flows for both roles — passenger booking, courier, groceries, and driver dashboards."],
+                ["03","Visual Design","A friendly purple system with strong contrast, large tap targets, and a consistent icon language."],
+                ["04","Prototype","Interactive Figma prototype covering 30+ screens across mobile and a responsive web companion."],
+              ].map(([n,t,d]) => (
+                <div key={n} className="process-step">
+                  <div className="step-num">{n}</div>
+                  <div className="step-title">{t}</div>
+                  <div className="step-text">{d}</div>
+                </div>
+              ))}
+            </div>
+
+            <div className="screens-label">High-Fidelity Prototype · Mobile</div>
+            <div className="screens-strip">
+              <div className="screens-track">
+                {goRideScreens.map((s) => (
+                  <div key={s.src} className="phone-frame">
+                    <div className="phone-screen">
+                      <img src={s.src} alt={s.title} loading="lazy" />
+                    </div>
+                    <div className="phone-caption"><strong>{s.title}</strong>{s.caption}</div>
+                  </div>
+                ))}
+                <div className="web-frame">
+                  <div className="web-screen">
+                    <img src="/goride/12-web-landing.jpg" alt="Web Companion" loading="lazy" />
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
 
-          <div className="process-row">
-            {[
-              ["01","Research","Interviewed riders & drivers to map pain points around safety, fare clarity and trip booking."],
-              ["02","Wireframes","Low-fi flows for both roles — passenger booking, courier, groceries, and driver dashboards."],
-              ["03","Visual Design","A friendly purple system with strong contrast, large tap targets, and a consistent icon language."],
-              ["04","Prototype","Interactive Figma prototype covering 30+ screens across mobile and a responsive web companion."],
-            ].map(([n,t,d]) => (
-              <div key={n} className="process-step">
-                <div className="step-num">{n}</div>
-                <div className="step-title">{t}</div>
-                <div className="step-text">{d}</div>
+          {/* Case Study 02 — Lumen */}
+          <div className="case-study">
+            <div className="uiux-banner lumen">
+              <div className="uiux-banner-top">
+                <div>
+                  <span className="uiux-tag case-tag-lumen">Case Study 02 · Mobile · Concept</span>
+                  <h3>Lumen — A Mindful Reading Companion</h3>
+                  <p>
+                    A self-initiated concept exploring how a reading app can feel calm rather than gamified. Warm, paper-inspired tones, a focused timer, and gentle insights — built to encourage the habit, not chase the streak.
+                  </p>
+                </div>
               </div>
-            ))}
-          </div>
+            </div>
 
-          <div className="screens-label">Selected Screens</div>
-          <div className="screens-gallery">
-            {goRideScreens.map((s) => (
-              <div key={s.src} className="screen-card">
-                <img src={s.src} alt={s.label} className="screen-img" loading="lazy" />
-                <div className="screen-label">{s.label}</div>
+            <div className="process-row">
+              {[
+                ["01","Discovery","Studied existing reading apps to find what felt noisy: streak guilt, social pressure, cluttered libraries."],
+                ["02","Concept","Defined a calmer principle — fewer numbers, more reflection. Designed for a quiet evening, not a leaderboard."],
+                ["03","Visual Language","Cream paper background, terracotta as the single warm accent, and a friendly serif/sans pairing for warmth."],
+                ["04","Prototype","Six high-fidelity screens covering onboarding, library, sessions, and gentle weekly insights."],
+              ].map(([n,t,d]) => (
+                <div key={n} className="process-step">
+                  <div className="step-num">{n}</div>
+                  <div className="step-title">{t}</div>
+                  <div className="step-text">{d}</div>
+                </div>
+              ))}
+            </div>
+
+            <div className="screens-label">High-Fidelity Prototype · Mobile</div>
+            <div className="screens-strip">
+              <div className="screens-track">
+                {lumenScreens.map((s) => (
+                  <div key={s.src} className="phone-frame">
+                    <div className="phone-screen">
+                      <img src={s.src} alt={s.title} loading="lazy" />
+                    </div>
+                    <div className="phone-caption"><strong>{s.title}</strong>{s.caption}</div>
+                  </div>
+                ))}
               </div>
-            ))}
-            <div className="screen-card">
-              <img src="/goride/12-web-landing.jpg" alt="Web Landing" className="screen-img web" loading="lazy" />
-              <div className="screen-label">Web Companion</div>
             </div>
           </div>
         </div>
@@ -461,9 +513,15 @@ function Portfolio() {
             </div>
             <div className="timeline-item">
               <div className="timeline-dot" />
-              <div className="timeline-date">Earlier</div>
-              <div className="timeline-degree">Pre-Engineering, FSc</div>
-              <div className="timeline-school">Foundation in mathematics, physics &amp; computing</div>
+              <div className="timeline-date">Pre-University</div>
+              <div className="timeline-degree">FSc Pre-Medical · A* Grade</div>
+              <div className="timeline-school">Foundation in biology, chemistry &amp; physics</div>
+            </div>
+            <div className="timeline-item">
+              <div className="timeline-dot" />
+              <div className="timeline-date">Secondary</div>
+              <div className="timeline-degree">Matriculation · A* Grade</div>
+              <div className="timeline-school">DHA Senior School for Girls</div>
             </div>
           </div>
         </div>
@@ -480,17 +538,14 @@ function Portfolio() {
             <p style={{ color: "var(--text-muted)" }}>
               Got a project in mind, or just want to say hi? My inbox is always open.
             </p>
-            <a className="contact-email" href="mailto:fatima.khizer@example.com">fatima.khizer@example.com</a>
+            <a className="contact-email" href="mailto:s.fatimakhizer@gmail.com">s.fatimakhizer@gmail.com</a>
             <div className="contact-links">
-              <a className="contact-link" href="#" target="_blank" rel="noreferrer">GitHub</a>
-              <a className="contact-link" href="#" target="_blank" rel="noreferrer">LinkedIn</a>
-              <a className="contact-link" href="https://www.figma.com/" target="_blank" rel="noreferrer">Figma</a>
+              <a className="contact-link" href="https://github.com/sayyedaFatimakhizer" target="_blank" rel="noreferrer">GitHub</a>
+              <a className="contact-link" href="https://github.com/sayyedaFatimakhizer" target="_blank" rel="noreferrer">LinkedIn</a>
             </div>
           </div>
         </div>
       </section>
-
-      <footer>
         © {new Date().getFullYear()} <span>Sayyeda Fatima Khizer Mufti</span> — Designed &amp; built with care.
       </footer>
     </div>
