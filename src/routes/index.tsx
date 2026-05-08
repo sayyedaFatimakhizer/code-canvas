@@ -449,15 +449,15 @@ function Portfolio() {
             </div>
           </div>
 
-          {/* Case Study 02 — Lumen */}
+          {/* Case Study 02 — NutriNest */}
           <div className="case-study">
-            <div className="uiux-banner lumen">
+            <div className="uiux-banner nutrinest">
               <div className="uiux-banner-top">
                 <div>
-                  <span className="uiux-tag case-tag-lumen">Case Study 02 · Mobile · Concept</span>
-                  <h3>Lumen — A Mindful Reading Companion</h3>
+                  <span className="uiux-tag case-tag-nutrinest">Case Study 02 · Mobile · Wellness</span>
+                  <h3>NutriNest — Healthy Eating Made Simple</h3>
                   <p>
-                    A self-initiated concept exploring how a reading app can feel calm rather than gamified. Warm, paper-inspired tones, a focused timer, and gentle insights — built to encourage the habit, not chase the streak.
+                    A modern healthy food planning app for students and busy professionals — personalized meal plans, calorie tracking, grocery lists, and gentle hydration reminders, all wrapped in a calm, paper-soft wellness aesthetic.
                   </p>
                 </div>
               </div>
@@ -465,10 +465,10 @@ function Portfolio() {
 
             <div className="process-row">
               {[
-                ["01","Discovery","Studied existing reading apps to find what felt noisy: streak guilt, social pressure, cluttered libraries."],
-                ["02","Concept","Defined a calmer principle — fewer numbers, more reflection. Designed for a quiet evening, not a leaderboard."],
-                ["03","Visual Language","Cream paper background, terracotta as the single warm accent, and a friendly serif/sans pairing for warmth."],
-                ["04","Prototype","Six high-fidelity screens covering onboarding, library, sessions, and gentle weekly insights."],
+                ["01","Discovery","Mapped pain points for students, gym beginners, and office workers — skipped meals, unclear calories, and apps that felt overwhelming."],
+                ["02","Concept","An AI-powered planner that suggests personalized meals, tracks nutrition, and keeps the interface minimal and stress-free."],
+                ["03","Visual Language","Sage green, beige cream, and warm brown on an 8pt grid. Rounded 20–24px cards, soft shadows, and large food photography for a Pinterest-wellness mood."],
+                ["04","Prototype","High-fidelity flows covering onboarding, meal detail, planner calendar, progress analytics, and profile preferences."],
               ].map(([n,t,d]) => (
                 <div key={n} className="process-step">
                   <div className="step-num">{n}</div>
@@ -481,7 +481,7 @@ function Portfolio() {
             <div className="screens-label">High-Fidelity Prototype · Mobile</div>
             <div className="screens-strip">
               <div className="screens-track">
-                {lumenScreens.map((s) => (
+                {nutriNestScreens.map((s) => (
                   <div key={s.src} className="phone-frame">
                     <div className="phone-screen">
                       <img src={s.src} alt={s.title} loading="lazy" />
@@ -492,6 +492,7 @@ function Portfolio() {
               </div>
             </div>
           </div>
+        </div>
         </div>
       </section>
 
