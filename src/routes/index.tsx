@@ -211,17 +211,21 @@ const skills = [
 ];
 
 const goRideScreens = [
-  { src: "/goride/01-splash.jpg", label: "Splash" },
-  { src: "/goride/02-role.jpg", label: "Role Select" },
-  { src: "/goride/03-login.jpg", label: "Login" },
-  { src: "/goride/04-signup.jpg", label: "Sign Up" },
-  { src: "/goride/05-rides.jpg", label: "Available Rides" },
-  { src: "/goride/06-services.jpg", label: "Services" },
-  { src: "/goride/07-citytocity.jpg", label: "City to City" },
-  { src: "/goride/08-groceries.jpg", label: "Groceries" },
-  { src: "/goride/09-profile.jpg", label: "Profile" },
-  { src: "/goride/10-safety.jpg", label: "Safety" },
-  { src: "/goride/11-aichat.jpg", label: "AI Assistant" },
+  { src: "/goride/01-splash.jpg", title: "Splash", caption: "Brand intro" },
+  { src: "/goride/02-role.jpg", title: "Role Select", caption: "Driver or rider" },
+  { src: "/goride/05-rides.jpg", title: "Available Rides", caption: "Live booking" },
+  { src: "/goride/06-services.jpg", title: "Services", caption: "Multi-service hub" },
+  { src: "/goride/10-safety.jpg", title: "Safety", caption: "Trip safeguards" },
+  { src: "/goride/11-aichat.jpg", title: "AI Assistant", caption: "Conversational help" },
+];
+
+const lumenScreens = [
+  { src: "/lumen/01-welcome.jpg", title: "Onboarding", caption: "Set the tone" },
+  { src: "/lumen/02-library.jpg", title: "Library", caption: "Personal shelf" },
+  { src: "/lumen/03-detail.jpg", title: "Book Detail", caption: "Start a session" },
+  { src: "/lumen/04-timer.jpg", title: "Reading Timer", caption: "Focused mode" },
+  { src: "/lumen/05-stats.jpg", title: "Insights", caption: "Weekly progress" },
+  { src: "/lumen/06-profile.jpg", title: "Profile", caption: "Goals & badges" },
 ];
 
 function Portfolio() {
