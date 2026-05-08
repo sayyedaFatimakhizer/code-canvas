@@ -123,17 +123,21 @@ html{scroll-behavior:smooth}
 .screens-strip::-webkit-scrollbar{height:6px}
 .screens-strip::-webkit-scrollbar-thumb{background:linear-gradient(90deg,var(--purple),var(--cyan));border-radius:3px}
 .screens-track{display:flex;gap:1.8rem;padding-bottom:.5rem;width:max-content}
-.phone-frame{position:relative;width:220px;flex-shrink:0;scroll-snap-align:start;border-radius:32px;padding:10px;background:linear-gradient(145deg,#1a0f30,#08040f);border:1px solid var(--glass-border);box-shadow:0 24px 60px rgba(0,0,0,.5),0 0 0 1px rgba(124,58,237,.15);transition:transform .35s ease,box-shadow .35s ease,border-color .35s ease}
-.phone-frame:hover{transform:translateY(-8px);border-color:var(--cyan);box-shadow:0 32px 70px rgba(0,229,255,.18),0 0 0 1px rgba(0,229,255,.3)}
-.phone-frame::before{content:'';position:absolute;top:18px;left:50%;transform:translateX(-50%);width:60px;height:6px;background:#000;border-radius:0 0 8px 8px;z-index:2}
-.phone-screen{position:relative;width:100%;aspect-ratio:9/19.5;border-radius:24px;overflow:hidden;background:#0a0510;display:block}
-.phone-screen img{width:100%;height:100%;object-fit:cover;display:block}
-.phone-caption{margin-top:.9rem;font-size:.78rem;font-weight:500;color:var(--text-muted);text-align:center;letter-spacing:.3px}
-.phone-caption strong{color:var(--text);font-weight:600;display:block;margin-bottom:.15rem;font-family:'Syne',sans-serif}
-.web-frame{position:relative;width:480px;flex-shrink:0;scroll-snap-align:start;border-radius:14px;padding:8px 8px 14px;background:linear-gradient(145deg,#1a0f30,#08040f);border:1px solid var(--glass-border);box-shadow:0 24px 60px rgba(0,0,0,.5)}
-.web-frame::before{content:'● ● ●';position:absolute;top:6px;left:14px;color:rgba(255,255,255,.25);font-size:8px;letter-spacing:3px}
-.web-screen{width:100%;aspect-ratio:16/10;border-radius:8px;overflow:hidden;background:#fff;margin-top:14px}
-.web-screen img{width:100%;height:100%;object-fit:cover;display:block}
+.phone-frame{position:relative;width:240px;flex-shrink:0;scroll-snap-align:start;border-radius:38px;padding:12px;background:linear-gradient(145deg,#1a0f30,#05030a);border:1px solid rgba(255,255,255,.08);box-shadow:0 30px 70px rgba(0,0,0,.55),0 0 0 1px rgba(124,58,237,.18),inset 0 1px 0 rgba(255,255,255,.05);transition:transform .35s ease,box-shadow .35s ease,border-color .35s ease}
+.phone-frame:hover{transform:translateY(-10px);border-color:var(--cyan);box-shadow:0 40px 80px rgba(0,229,255,.2),0 0 0 1px rgba(0,229,255,.35)}
+.phone-frame::before{content:'';position:absolute;top:20px;left:50%;transform:translateX(-50%);width:80px;height:22px;background:#000;border-radius:14px;z-index:2}
+.phone-screen{position:relative;width:100%;aspect-ratio:9/19.5;border-radius:28px;overflow:hidden;background:#fff;display:flex;align-items:flex-start;justify-content:center}
+.phone-screen img{width:100%;height:100%;object-fit:contain;object-position:top center;display:block;background:#fff}
+.phone-caption{margin-top:1rem;font-size:.78rem;font-weight:500;color:var(--text-muted);text-align:center;letter-spacing:.3px}
+.phone-caption strong{color:var(--text);font-weight:600;display:block;margin-bottom:.15rem;font-family:'Syne',sans-serif;font-size:.88rem}
+.web-frame{position:relative;width:560px;flex-shrink:0;scroll-snap-align:start;border-radius:14px;padding:32px 10px 14px;background:linear-gradient(145deg,#1a0f30,#05030a);border:1px solid rgba(255,255,255,.08);box-shadow:0 30px 70px rgba(0,0,0,.55),0 0 0 1px rgba(124,58,237,.18)}
+.web-frame::before{content:'● ● ●';position:absolute;top:10px;left:16px;color:rgba(255,255,255,.4);font-size:11px;letter-spacing:5px}
+.web-frame::after{content:'goride.app';position:absolute;top:8px;left:50%;transform:translateX(-50%);background:rgba(255,255,255,.06);color:rgba(255,255,255,.5);font-size:10px;padding:3px 18px;border-radius:6px;letter-spacing:.5px}
+.web-screen{width:100%;aspect-ratio:16/10;border-radius:8px;overflow:hidden;background:#fff;display:flex;align-items:flex-start;justify-content:center}
+.web-screen img{width:100%;height:100%;object-fit:contain;object-position:top center;display:block;background:#fff}
+.web-caption{margin-top:1rem;font-size:.78rem;font-weight:500;color:var(--text-muted);text-align:center;letter-spacing:.3px}
+.web-caption strong{color:var(--text);font-weight:600;display:block;margin-bottom:.15rem;font-family:'Syne',sans-serif;font-size:.88rem}
+.screens-label-sub{margin-top:3rem}
 .case-study + .case-study{margin-top:6rem;padding-top:6rem;border-top:1px solid var(--glass-border)}
 .case-tag-nutrinest{background:rgba(143,185,150,.14);border-color:rgba(143,185,150,.4);color:#a8d4af}
 .uiux-banner.nutrinest{background:linear-gradient(135deg,rgba(20,40,25,.7),rgba(143,185,150,.18));border-color:rgba(143,185,150,.3)}
@@ -156,7 +160,7 @@ html{scroll-behavior:smooth}
 .portfolio footer{border-top:1px solid var(--glass-border);padding:2rem;text-align:center;color:var(--text-muted);font-size:.85rem;z-index:1;position:relative}
 .portfolio footer span{background:linear-gradient(135deg,var(--purple-light),var(--cyan));-webkit-background-clip:text;-webkit-text-fill-color:transparent;font-weight:600}
 @keyframes fadeUp{from{opacity:0;transform:translateY(25px)}to{opacity:1;transform:translateY(0)}}
-@media(max-width:768px){.portfolio nav{padding:1rem 1.5rem}.nav-links{display:none;flex-direction:column;position:absolute;top:100%;left:0;right:0;background:rgba(8,4,15,.97);padding:1.5rem;gap:1.2rem;border-bottom:1px solid var(--glass-border)}.nav-links.open{display:flex}.hamburger{display:flex}.project-card{grid-template-columns:1fr}.project-card.reverse .project-visual{order:0}.project-visual{min-height:200px}.uiux-banner{padding:2rem}.uiux-banner-top{flex-direction:column}.phone-frame{width:180px}.web-frame{width:340px}}
+@media(max-width:768px){.portfolio nav{padding:1rem 1.5rem}.nav-links{display:none;flex-direction:column;position:absolute;top:100%;left:0;right:0;background:rgba(8,4,15,.97);padding:1.5rem;gap:1.2rem;border-bottom:1px solid var(--glass-border)}.nav-links.open{display:flex}.hamburger{display:flex}.project-card{grid-template-columns:1fr}.project-card.reverse .project-visual{order:0}.project-visual{min-height:200px}.uiux-banner{padding:2rem}.uiux-banner-top{flex-direction:column}.phone-frame{width:200px}.web-frame{width:360px;padding-top:28px}}
 .hero-motto{margin-top:2rem;font-family:'Syne',sans-serif;font-size:.85rem;letter-spacing:4px;text-transform:uppercase;color:var(--text-muted);opacity:0;animation:fadeUp 1s 1s forwards;display:flex;flex-wrap:wrap;gap:.4rem .8rem;align-items:center}
 .hero-motto span{color:var(--cyan)}
 .hero-motto .dot{width:4px;height:4px;border-radius:50%;background:var(--purple-light);display:inline-block}
@@ -210,27 +214,43 @@ const skills = [
   },
 ];
 
-const goRideScreens = [
-  { src: "/goride/01-splash.jpg", title: "Splash", caption: "Brand intro" },
-  { src: "/goride/02-role.jpg", title: "Role Select", caption: "Driver or rider" },
-  { src: "/goride/03-login.jpg", title: "Login", caption: "Quick sign-in" },
-  { src: "/goride/04-signup.jpg", title: "Sign Up", caption: "New account" },
-  { src: "/goride/05-rides.jpg", title: "Available Rides", caption: "Live booking" },
-  { src: "/goride/06-services.jpg", title: "Services", caption: "Multi-service hub" },
-  { src: "/goride/07-citytocity.jpg", title: "City to City", caption: "Long-distance trips" },
-  { src: "/goride/08-groceries.jpg", title: "Groceries", caption: "On-demand delivery" },
-  { src: "/goride/09-profile.jpg", title: "Profile", caption: "Account & trips" },
-  { src: "/goride/10-safety.jpg", title: "Safety", caption: "Trip safeguards" },
-  { src: "/goride/11-aichat.jpg", title: "AI Assistant", caption: "Conversational help" },
+const goRideAppScreens = [
+  { src: "/goride/app-01.jpg", title: "Splash", caption: "Brand intro" },
+  { src: "/goride/app-02.jpg", title: "Welcome", caption: "Login or sign up" },
+  { src: "/goride/app-03.jpg", title: "Role Select", caption: "Driver or passenger" },
+  { src: "/goride/app-04.jpg", title: "Auth Choice", caption: "Quick start" },
+  { src: "/goride/app-05.jpg", title: "Login", caption: "Returning user" },
+  { src: "/goride/app-06.jpg", title: "Login Alt", caption: "Streamlined form" },
+  { src: "/goride/app-07.jpg", title: "Registration", caption: "Driver onboarding" },
+  { src: "/goride/app-08.jpg", title: "Sign Up", caption: "New passenger" },
+  { src: "/goride/app-09.jpg", title: "Available Rides", caption: "Live booking feed" },
+  { src: "/goride/app-10.jpg", title: "Services", caption: "Multi-service hub" },
+  { src: "/goride/app-11.jpg", title: "City to City", caption: "Long-distance booking" },
+  { src: "/goride/app-12.jpg", title: "City Ride", caption: "In-city booking" },
+  { src: "/goride/app-13.jpg", title: "Courier", caption: "Parcel delivery" },
+  { src: "/goride/app-14.jpg", title: "Groceries", caption: "Shop on demand" },
+  { src: "/goride/app-15.jpg", title: "Cart", caption: "Checkout & pay" },
+];
+
+const goRideWebScreens = [
+  { src: "/goride/web-25.jpg", title: "Login", caption: "Web sign-in" },
+  { src: "/goride/web-26.jpg", title: "Registration", caption: "Driver signup" },
+  { src: "/goride/web-27.jpg", title: "Dashboard", caption: "Passenger services" },
+  { src: "/goride/web-28.jpg", title: "Sign Up", caption: "Create account" },
+  { src: "/goride/web-29.jpg", title: "City Ride", caption: "Booking flow" },
+  { src: "/goride/web-30.jpg", title: "City to City", caption: "Schedule a trip" },
+  { src: "/goride/web-31.jpg", title: "Courier", caption: "Send a parcel" },
+  { src: "/goride/web-32.jpg", title: "Available Rides", caption: "Live feed" },
+  { src: "/goride/web-33.jpg", title: "Groceries", caption: "Browse products" },
+  { src: "/goride/web-34.jpg", title: "Cart", caption: "Checkout" },
 ];
 
 const nutriNestScreens = [
   { src: "/nutrinest/01-splash.jpg", title: "Splash", caption: "First impression" },
-  { src: "/nutrinest/02-onboarding.jpg", title: "Onboarding", caption: "Personalized plans" },
-  { src: "/nutrinest/03-meal-detail.jpg", title: "Meal Detail", caption: "Recipe & nutrition" },
-  { src: "/nutrinest/04-planner.jpg", title: "Meal Planner", caption: "Weekly schedule" },
-  { src: "/nutrinest/05-progress.jpg", title: "Progress", caption: "Insights & habits" },
-  { src: "/nutrinest/06-profile.jpg", title: "Profile", caption: "Goals & preferences" },
+  { src: "/nutrinest/02-meal-detail.jpg", title: "Meal Detail", caption: "Recipe & nutrition" },
+  { src: "/nutrinest/03-planner.jpg", title: "Meal Planner", caption: "Weekly schedule" },
+  { src: "/nutrinest/04-progress.jpg", title: "Progress", caption: "Insights & habits" },
+  { src: "/nutrinest/05-profile.jpg", title: "Profile", caption: "Goals & preferences" },
 ];
 
 function Portfolio() {
@@ -429,10 +449,10 @@ function Portfolio() {
               ))}
             </div>
 
-            <div className="screens-label">High-Fidelity Prototype · Mobile</div>
+            <div className="screens-label">High-Fidelity Prototype · Mobile App ({goRideAppScreens.length} screens)</div>
             <div className="screens-strip">
               <div className="screens-track">
-                {goRideScreens.map((s) => (
+                {goRideAppScreens.map((s) => (
                   <div key={s.src} className="phone-frame">
                     <div className="phone-screen">
                       <img src={s.src} alt={s.title} loading="lazy" />
@@ -440,11 +460,20 @@ function Portfolio() {
                     <div className="phone-caption"><strong>{s.title}</strong>{s.caption}</div>
                   </div>
                 ))}
-                <div className="web-frame">
-                  <div className="web-screen">
-                    <img src="/goride/12-web-landing.jpg" alt="Web Companion" loading="lazy" />
+              </div>
+            </div>
+
+            <div className="screens-label screens-label-sub">Responsive Web Companion ({goRideWebScreens.length} screens)</div>
+            <div className="screens-strip">
+              <div className="screens-track">
+                {goRideWebScreens.map((s) => (
+                  <div key={s.src} className="web-frame">
+                    <div className="web-screen">
+                      <img src={s.src} alt={s.title} loading="lazy" />
+                    </div>
+                    <div className="web-caption"><strong>{s.title}</strong>{s.caption}</div>
                   </div>
-                </div>
+                ))}
               </div>
             </div>
           </div>
