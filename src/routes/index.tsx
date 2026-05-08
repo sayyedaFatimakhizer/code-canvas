@@ -379,15 +379,12 @@ function Portfolio() {
                 <div className="project-num">Project 02</div>
                 <h3 className="project-title">Farm Management System</h3>
                 <p className="project-desc">
-                  An OOP-driven C++ application for tracking livestock, crops, inventory, and finances — built around clean class hierarchies and a focus on real-world workflows.
+                  A Python desktop application backed by a SQL database — handles livestock, crops, inventory, and finances with clean queries, normalized schemas, and a focus on real-world farm workflows.
                 </p>
                 <div className="project-stack">
-                  <span className="stack-tag">C++</span>
-                  <span className="stack-tag">OOP</span>
-                  <span className="stack-tag">File I/O</span>
-                </div>
-                <div className="project-links">
-                  <a href="#" className="proj-link github">GitHub →</a>
+                  <span className="stack-tag">Python</span>
+                  <span className="stack-tag">SQL</span>
+                  <span className="stack-tag">Database Design</span>
                 </div>
               </div>
             </article>
