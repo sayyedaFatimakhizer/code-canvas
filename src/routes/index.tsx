@@ -135,9 +135,9 @@ html{scroll-behavior:smooth}
 .web-screen{width:100%;aspect-ratio:16/10;border-radius:8px;overflow:hidden;background:#fff;margin-top:14px}
 .web-screen img{width:100%;height:100%;object-fit:cover;display:block}
 .case-study + .case-study{margin-top:6rem;padding-top:6rem;border-top:1px solid var(--glass-border)}
-.case-tag-lumen{background:rgba(255,140,90,.12);border-color:rgba(255,140,90,.35);color:#ffb088}
-.uiux-banner.lumen{background:linear-gradient(135deg,rgba(80,30,10,.6),rgba(255,140,90,.18));border-color:rgba(255,140,90,.3)}
-.uiux-banner.lumen::before{background:radial-gradient(circle,rgba(255,140,90,.12),transparent 70%)}
+.case-tag-nutrinest{background:rgba(143,185,150,.14);border-color:rgba(143,185,150,.4);color:#a8d4af}
+.uiux-banner.nutrinest{background:linear-gradient(135deg,rgba(20,40,25,.7),rgba(143,185,150,.18));border-color:rgba(143,185,150,.3)}
+.uiux-banner.nutrinest::before{background:radial-gradient(circle,rgba(143,185,150,.14),transparent 70%)}
 #education{padding:7rem 0;background:var(--bg2)}
 .timeline{position:relative;padding-left:2rem;max-width:780px;margin:0 auto}
 .timeline::before{content:'';position:absolute;left:0;top:10px;bottom:10px;width:2px;background:linear-gradient(to bottom,var(--purple),var(--cyan),transparent)}
@@ -213,19 +213,24 @@ const skills = [
 const goRideScreens = [
   { src: "/goride/01-splash.jpg", title: "Splash", caption: "Brand intro" },
   { src: "/goride/02-role.jpg", title: "Role Select", caption: "Driver or rider" },
+  { src: "/goride/03-login.jpg", title: "Login", caption: "Quick sign-in" },
+  { src: "/goride/04-signup.jpg", title: "Sign Up", caption: "New account" },
   { src: "/goride/05-rides.jpg", title: "Available Rides", caption: "Live booking" },
   { src: "/goride/06-services.jpg", title: "Services", caption: "Multi-service hub" },
+  { src: "/goride/07-citytocity.jpg", title: "City to City", caption: "Long-distance trips" },
+  { src: "/goride/08-groceries.jpg", title: "Groceries", caption: "On-demand delivery" },
+  { src: "/goride/09-profile.jpg", title: "Profile", caption: "Account & trips" },
   { src: "/goride/10-safety.jpg", title: "Safety", caption: "Trip safeguards" },
   { src: "/goride/11-aichat.jpg", title: "AI Assistant", caption: "Conversational help" },
 ];
 
-const lumenScreens = [
-  { src: "/lumen/01-welcome.jpg", title: "Onboarding", caption: "Set the tone" },
-  { src: "/lumen/02-library.jpg", title: "Library", caption: "Personal shelf" },
-  { src: "/lumen/03-detail.jpg", title: "Book Detail", caption: "Start a session" },
-  { src: "/lumen/04-timer.jpg", title: "Reading Timer", caption: "Focused mode" },
-  { src: "/lumen/05-stats.jpg", title: "Insights", caption: "Weekly progress" },
-  { src: "/lumen/06-profile.jpg", title: "Profile", caption: "Goals & badges" },
+const nutriNestScreens = [
+  { src: "/nutrinest/01-splash.jpg", title: "Splash", caption: "First impression" },
+  { src: "/nutrinest/02-onboarding.jpg", title: "Onboarding", caption: "Personalized plans" },
+  { src: "/nutrinest/03-meal-detail.jpg", title: "Meal Detail", caption: "Recipe & nutrition" },
+  { src: "/nutrinest/04-planner.jpg", title: "Meal Planner", caption: "Weekly schedule" },
+  { src: "/nutrinest/05-progress.jpg", title: "Progress", caption: "Insights & habits" },
+  { src: "/nutrinest/06-profile.jpg", title: "Profile", caption: "Goals & preferences" },
 ];
 
 function Portfolio() {
@@ -374,15 +379,12 @@ function Portfolio() {
                 <div className="project-num">Project 02</div>
                 <h3 className="project-title">Farm Management System</h3>
                 <p className="project-desc">
-                  An OOP-driven C++ application for tracking livestock, crops, inventory, and finances — built around clean class hierarchies and a focus on real-world workflows.
+                  A Python desktop application backed by a SQL database — handles livestock, crops, inventory, and finances with clean queries, normalized schemas, and a focus on real-world farm workflows.
                 </p>
                 <div className="project-stack">
-                  <span className="stack-tag">C++</span>
-                  <span className="stack-tag">OOP</span>
-                  <span className="stack-tag">File I/O</span>
-                </div>
-                <div className="project-links">
-                  <a href="#" className="proj-link github">GitHub →</a>
+                  <span className="stack-tag">Python</span>
+                  <span className="stack-tag">SQL</span>
+                  <span className="stack-tag">Database Design</span>
                 </div>
               </div>
             </article>
@@ -409,10 +411,6 @@ function Portfolio() {
                     An end-to-end ride-booking experience with an integrated AI assistant — designed for two distinct user roles (driver &amp; passenger) across mobile and web. Every screen was crafted to keep the flow effortless, from onboarding to checkout.
                   </p>
                 </div>
-                <a className="figma-btn" href="https://www.figma.com/design/EbZrBez1bkJWGbhpwN9eXn/ride-booking-with-Ai-assistance?node-id=0-1" target="_blank" rel="noreferrer">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M5 3h14v18l-7-4-7 4z"/></svg>
-                  Open in Figma
-                </a>
               </div>
             </div>
 
@@ -451,15 +449,15 @@ function Portfolio() {
             </div>
           </div>
 
-          {/* Case Study 02 — Lumen */}
+          {/* Case Study 02 — NutriNest */}
           <div className="case-study">
-            <div className="uiux-banner lumen">
+            <div className="uiux-banner nutrinest">
               <div className="uiux-banner-top">
                 <div>
-                  <span className="uiux-tag case-tag-lumen">Case Study 02 · Mobile · Concept</span>
-                  <h3>Lumen — A Mindful Reading Companion</h3>
+                  <span className="uiux-tag case-tag-nutrinest">Case Study 02 · Mobile · Wellness</span>
+                  <h3>NutriNest — Healthy Eating Made Simple</h3>
                   <p>
-                    A self-initiated concept exploring how a reading app can feel calm rather than gamified. Warm, paper-inspired tones, a focused timer, and gentle insights — built to encourage the habit, not chase the streak.
+                    A modern healthy food planning app for students and busy professionals — personalized meal plans, calorie tracking, grocery lists, and gentle hydration reminders, all wrapped in a calm, paper-soft wellness aesthetic.
                   </p>
                 </div>
               </div>
@@ -467,10 +465,10 @@ function Portfolio() {
 
             <div className="process-row">
               {[
-                ["01","Discovery","Studied existing reading apps to find what felt noisy: streak guilt, social pressure, cluttered libraries."],
-                ["02","Concept","Defined a calmer principle — fewer numbers, more reflection. Designed for a quiet evening, not a leaderboard."],
-                ["03","Visual Language","Cream paper background, terracotta as the single warm accent, and a friendly serif/sans pairing for warmth."],
-                ["04","Prototype","Six high-fidelity screens covering onboarding, library, sessions, and gentle weekly insights."],
+                ["01","Discovery","Mapped pain points for students, gym beginners, and office workers — skipped meals, unclear calories, and apps that felt overwhelming."],
+                ["02","Concept","An AI-powered planner that suggests personalized meals, tracks nutrition, and keeps the interface minimal and stress-free."],
+                ["03","Visual Language","Sage green, beige cream, and warm brown on an 8pt grid. Rounded 20–24px cards, soft shadows, and large food photography for a Pinterest-wellness mood."],
+                ["04","Prototype","High-fidelity flows covering onboarding, meal detail, planner calendar, progress analytics, and profile preferences."],
               ].map(([n,t,d]) => (
                 <div key={n} className="process-step">
                   <div className="step-num">{n}</div>
@@ -483,7 +481,7 @@ function Portfolio() {
             <div className="screens-label">High-Fidelity Prototype · Mobile</div>
             <div className="screens-strip">
               <div className="screens-track">
-                {lumenScreens.map((s) => (
+                {nutriNestScreens.map((s) => (
                   <div key={s.src} className="phone-frame">
                     <div className="phone-screen">
                       <img src={s.src} alt={s.title} loading="lazy" />
