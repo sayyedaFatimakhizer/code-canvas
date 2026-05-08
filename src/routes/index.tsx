@@ -152,8 +152,8 @@ html{scroll-behavior:smooth}
 .timeline-school{color:var(--text-muted);font-size:.95rem;margin-bottom:.5rem}
 #contact{padding:7rem 0}
 .contact-inner{max-width:700px;margin:0 auto;text-align:center}
-.contact-email{display:block;margin:2rem 0;font-family:'Syne',sans-serif;font-size:clamp(1.5rem,4vw,2.5rem);font-weight:800;letter-spacing:-1px;background:linear-gradient(135deg,var(--purple-light),var(--cyan));-webkit-background-clip:text;-webkit-text-fill-color:transparent;text-decoration:none;transition:opacity .25s}
-.contact-email:hover{opacity:.8}
+.contact-email{display:inline-block;margin:2rem auto;font-family:'Syne',sans-serif;font-size:clamp(1.4rem,3.2vw,2.2rem);font-weight:800;letter-spacing:-.5px;color:var(--text);white-space:nowrap;text-decoration:none;transition:opacity .25s,color .25s;background:none;-webkit-text-fill-color:var(--text)}
+.contact-email:hover{opacity:.95;color:var(--cyan);-webkit-text-fill-color:var(--cyan)}
 .contact-links{display:flex;justify-content:center;gap:1.5rem;flex-wrap:wrap;margin-top:2.5rem}
 .contact-link{display:inline-flex;align-items:center;gap:.5rem;padding:.75rem 1.5rem;background:var(--card);border:1px solid var(--glass-border);border-radius:50px;color:var(--text-muted);text-decoration:none;font-size:.9rem;transition:border-color .25s,color .25s,transform .25s}
 .contact-link:hover{border-color:var(--cyan);color:var(--cyan);transform:translateY(-3px)}
@@ -243,14 +243,6 @@ const goRideWebScreens = [
   { src: "/goride/web-32.jpg", title: "Available Rides", caption: "Live feed" },
   { src: "/goride/web-33.jpg", title: "Groceries", caption: "Browse products" },
   { src: "/goride/web-34.jpg", title: "Cart", caption: "Checkout" },
-];
-
-const nutriNestScreens = [
-  { src: "/nutrinest/01-splash.jpg", title: "Splash", caption: "First impression" },
-  { src: "/nutrinest/02-meal-detail.jpg", title: "Meal Detail", caption: "Recipe & nutrition" },
-  { src: "/nutrinest/03-planner.jpg", title: "Meal Planner", caption: "Weekly schedule" },
-  { src: "/nutrinest/04-progress.jpg", title: "Progress", caption: "Insights & habits" },
-  { src: "/nutrinest/05-profile.jpg", title: "Profile", caption: "Goals & preferences" },
 ];
 
 function Portfolio() {
@@ -472,50 +464,6 @@ function Portfolio() {
                       <img src={s.src} alt={s.title} loading="lazy" />
                     </div>
                     <div className="web-caption"><strong>{s.title}</strong>{s.caption}</div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-
-          {/* Case Study 02 — NutriNest */}
-          <div className="case-study">
-            <div className="uiux-banner nutrinest">
-              <div className="uiux-banner-top">
-                <div>
-                  <span className="uiux-tag case-tag-nutrinest">Case Study 02 · Mobile · Wellness</span>
-                  <h3>NutriNest — Healthy Eating Made Simple</h3>
-                  <p>
-                    A modern healthy food planning app for students and busy professionals — personalized meal plans, calorie tracking, grocery lists, and gentle hydration reminders, all wrapped in a calm, paper-soft wellness aesthetic.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div className="process-row">
-              {[
-                ["01","Discovery","Mapped pain points for students, gym beginners, and office workers — skipped meals, unclear calories, and apps that felt overwhelming."],
-                ["02","Concept","An AI-powered planner that suggests personalized meals, tracks nutrition, and keeps the interface minimal and stress-free."],
-                ["03","Visual Language","Sage green, beige cream, and warm brown on an 8pt grid. Rounded 20–24px cards, soft shadows, and large food photography for a Pinterest-wellness mood."],
-                ["04","Prototype","High-fidelity flows covering onboarding, meal detail, planner calendar, progress analytics, and profile preferences."],
-              ].map(([n,t,d]) => (
-                <div key={n} className="process-step">
-                  <div className="step-num">{n}</div>
-                  <div className="step-title">{t}</div>
-                  <div className="step-text">{d}</div>
-                </div>
-              ))}
-            </div>
-
-            <div className="screens-label">High-Fidelity Prototype · Mobile</div>
-            <div className="screens-strip">
-              <div className="screens-track">
-                {nutriNestScreens.map((s) => (
-                  <div key={s.src} className="phone-frame">
-                    <div className="phone-screen">
-                      <img src={s.src} alt={s.title} loading="lazy" />
-                    </div>
-                    <div className="phone-caption"><strong>{s.title}</strong>{s.caption}</div>
                   </div>
                 ))}
               </div>
