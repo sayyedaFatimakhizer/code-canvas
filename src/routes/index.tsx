@@ -117,14 +117,27 @@ html{scroll-behavior:smooth}
 .step-num{font-family:'Syne',sans-serif;font-size:2.5rem;font-weight:800;color:rgba(124,58,237,.25);line-height:1;margin-bottom:.8rem}
 .step-title{font-family:'Syne',sans-serif;font-weight:700;font-size:.9rem;color:var(--cyan);margin-bottom:.6rem;letter-spacing:.5px}
 .step-text{color:var(--text-muted);font-size:.85rem;line-height:1.7}
-.screens-label{font-family:'Syne',sans-serif;font-weight:700;font-size:1.1rem;color:var(--text);margin-bottom:1.5rem;display:flex;align-items:center;gap:.8rem}
+.screens-label{font-family:'Syne',sans-serif;font-weight:700;font-size:1.1rem;color:var(--text);margin-bottom:1.8rem;display:flex;align-items:center;gap:.8rem}
 .screens-label::after{content:'';flex:1;height:1px;background:var(--glass-border)}
-.screens-gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:1.2rem}
-.screen-card{background:var(--card);border:1px solid var(--glass-border);border-radius:16px;overflow:hidden;transition:border-color .3s,transform .3s,box-shadow .3s}
-.screen-card:hover{border-color:var(--cyan);transform:translateY(-4px);box-shadow:0 16px 50px rgba(0,229,255,.15)}
-.screen-img{width:100%;aspect-ratio:9/16;object-fit:cover;background:#fff;display:block}
-.screen-img.web{aspect-ratio:16/10;object-fit:contain;background:#fff;padding:.5rem}
-.screen-label{padding:.7rem 1rem;font-size:.78rem;font-weight:500;color:var(--text-muted);background:rgba(8,4,15,.8)}
+.screens-strip{position:relative;margin:0 -2rem;padding:1rem 2rem 2rem;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:thin;scrollbar-color:var(--purple) transparent}
+.screens-strip::-webkit-scrollbar{height:6px}
+.screens-strip::-webkit-scrollbar-thumb{background:linear-gradient(90deg,var(--purple),var(--cyan));border-radius:3px}
+.screens-track{display:flex;gap:1.8rem;padding-bottom:.5rem;width:max-content}
+.phone-frame{position:relative;width:220px;flex-shrink:0;scroll-snap-align:start;border-radius:32px;padding:10px;background:linear-gradient(145deg,#1a0f30,#08040f);border:1px solid var(--glass-border);box-shadow:0 24px 60px rgba(0,0,0,.5),0 0 0 1px rgba(124,58,237,.15);transition:transform .35s ease,box-shadow .35s ease,border-color .35s ease}
+.phone-frame:hover{transform:translateY(-8px);border-color:var(--cyan);box-shadow:0 32px 70px rgba(0,229,255,.18),0 0 0 1px rgba(0,229,255,.3)}
+.phone-frame::before{content:'';position:absolute;top:18px;left:50%;transform:translateX(-50%);width:60px;height:6px;background:#000;border-radius:0 0 8px 8px;z-index:2}
+.phone-screen{position:relative;width:100%;aspect-ratio:9/19.5;border-radius:24px;overflow:hidden;background:#0a0510;display:block}
+.phone-screen img{width:100%;height:100%;object-fit:cover;display:block}
+.phone-caption{margin-top:.9rem;font-size:.78rem;font-weight:500;color:var(--text-muted);text-align:center;letter-spacing:.3px}
+.phone-caption strong{color:var(--text);font-weight:600;display:block;margin-bottom:.15rem;font-family:'Syne',sans-serif}
+.web-frame{position:relative;width:480px;flex-shrink:0;scroll-snap-align:start;border-radius:14px;padding:8px 8px 14px;background:linear-gradient(145deg,#1a0f30,#08040f);border:1px solid var(--glass-border);box-shadow:0 24px 60px rgba(0,0,0,.5)}
+.web-frame::before{content:'● ● ●';position:absolute;top:6px;left:14px;color:rgba(255,255,255,.25);font-size:8px;letter-spacing:3px}
+.web-screen{width:100%;aspect-ratio:16/10;border-radius:8px;overflow:hidden;background:#fff;margin-top:14px}
+.web-screen img{width:100%;height:100%;object-fit:cover;display:block}
+.case-study + .case-study{margin-top:6rem;padding-top:6rem;border-top:1px solid var(--glass-border)}
+.case-tag-lumen{background:rgba(255,140,90,.12);border-color:rgba(255,140,90,.35);color:#ffb088}
+.uiux-banner.lumen{background:linear-gradient(135deg,rgba(80,30,10,.6),rgba(255,140,90,.18));border-color:rgba(255,140,90,.3)}
+.uiux-banner.lumen::before{background:radial-gradient(circle,rgba(255,140,90,.12),transparent 70%)}
 #education{padding:7rem 0;background:var(--bg2)}
 .timeline{position:relative;padding-left:2rem;max-width:780px;margin:0 auto}
 .timeline::before{content:'';position:absolute;left:0;top:10px;bottom:10px;width:2px;background:linear-gradient(to bottom,var(--purple),var(--cyan),transparent)}
@@ -143,7 +156,10 @@ html{scroll-behavior:smooth}
 .portfolio footer{border-top:1px solid var(--glass-border);padding:2rem;text-align:center;color:var(--text-muted);font-size:.85rem;z-index:1;position:relative}
 .portfolio footer span{background:linear-gradient(135deg,var(--purple-light),var(--cyan));-webkit-background-clip:text;-webkit-text-fill-color:transparent;font-weight:600}
 @keyframes fadeUp{from{opacity:0;transform:translateY(25px)}to{opacity:1;transform:translateY(0)}}
-@media(max-width:768px){.portfolio nav{padding:1rem 1.5rem}.nav-links{display:none;flex-direction:column;position:absolute;top:100%;left:0;right:0;background:rgba(8,4,15,.97);padding:1.5rem;gap:1.2rem;border-bottom:1px solid var(--glass-border)}.nav-links.open{display:flex}.hamburger{display:flex}.project-card{grid-template-columns:1fr}.project-card.reverse .project-visual{order:0}.project-visual{min-height:200px}.uiux-banner{padding:2rem}.uiux-banner-top{flex-direction:column}.screens-gallery{grid-template-columns:repeat(auto-fill,minmax(160px,1fr))}}
+@media(max-width:768px){.portfolio nav{padding:1rem 1.5rem}.nav-links{display:none;flex-direction:column;position:absolute;top:100%;left:0;right:0;background:rgba(8,4,15,.97);padding:1.5rem;gap:1.2rem;border-bottom:1px solid var(--glass-border)}.nav-links.open{display:flex}.hamburger{display:flex}.project-card{grid-template-columns:1fr}.project-card.reverse .project-visual{order:0}.project-visual{min-height:200px}.uiux-banner{padding:2rem}.uiux-banner-top{flex-direction:column}.phone-frame{width:180px}.web-frame{width:340px}}
+.hero-motto{margin-top:2rem;font-family:'Syne',sans-serif;font-size:.85rem;letter-spacing:4px;text-transform:uppercase;color:var(--text-muted);opacity:0;animation:fadeUp 1s 1s forwards;display:flex;flex-wrap:wrap;gap:.4rem .8rem;align-items:center}
+.hero-motto span{color:var(--cyan)}
+.hero-motto .dot{width:4px;height:4px;border-radius:50%;background:var(--purple-light);display:inline-block}
 `;
 
 const navLinks = [
@@ -195,17 +211,21 @@ const skills = [
 ];
 
 const goRideScreens = [
-  { src: "/goride/01-splash.jpg", label: "Splash" },
-  { src: "/goride/02-role.jpg", label: "Role Select" },
-  { src: "/goride/03-login.jpg", label: "Login" },
-  { src: "/goride/04-signup.jpg", label: "Sign Up" },
-  { src: "/goride/05-rides.jpg", label: "Available Rides" },
-  { src: "/goride/06-services.jpg", label: "Services" },
-  { src: "/goride/07-citytocity.jpg", label: "City to City" },
-  { src: "/goride/08-groceries.jpg", label: "Groceries" },
-  { src: "/goride/09-profile.jpg", label: "Profile" },
-  { src: "/goride/10-safety.jpg", label: "Safety" },
-  { src: "/goride/11-aichat.jpg", label: "AI Assistant" },
+  { src: "/goride/01-splash.jpg", title: "Splash", caption: "Brand intro" },
+  { src: "/goride/02-role.jpg", title: "Role Select", caption: "Driver or rider" },
+  { src: "/goride/05-rides.jpg", title: "Available Rides", caption: "Live booking" },
+  { src: "/goride/06-services.jpg", title: "Services", caption: "Multi-service hub" },
+  { src: "/goride/10-safety.jpg", title: "Safety", caption: "Trip safeguards" },
+  { src: "/goride/11-aichat.jpg", title: "AI Assistant", caption: "Conversational help" },
+];
+
+const lumenScreens = [
+  { src: "/lumen/01-welcome.jpg", title: "Onboarding", caption: "Set the tone" },
+  { src: "/lumen/02-library.jpg", title: "Library", caption: "Personal shelf" },
+  { src: "/lumen/03-detail.jpg", title: "Book Detail", caption: "Start a session" },
+  { src: "/lumen/04-timer.jpg", title: "Reading Timer", caption: "Focused mode" },
+  { src: "/lumen/05-stats.jpg", title: "Insights", caption: "Weekly progress" },
+  { src: "/lumen/06-profile.jpg", title: "Profile", caption: "Goals & badges" },
 ];
 
 function Portfolio() {
@@ -249,6 +269,12 @@ function Portfolio() {
           <div className="hero-ctas">
             <a href="#projects" className="btn-primary">View My Work</a>
             <a href="#contact" className="btn-outline">Get in Touch</a>
+          </div>
+          <div className="hero-motto">
+            <span>Design</span><i className="dot" />
+            <span>Build</span><i className="dot" />
+            <span>Refactor</span><i className="dot" />
+            <span>Repeat</span>
           </div>
           <div className="hero-scroll"><div className="scroll-line" />Scroll</div>
         </div>
@@ -368,52 +394,104 @@ function Portfolio() {
         <div className="container">
           <div className="section-header">
             <span className="section-label">UI / UX Design</span>
-            <h2 className="section-title">Design <span className="accent">Case Study</span></h2>
+            <h2 className="section-title">Design <span className="accent">Case Studies</span></h2>
             <div className="section-line" />
           </div>
 
-          <div className="uiux-banner">
-            <div className="uiux-banner-top">
-              <div>
-                <span className="uiux-tag">Mobile + Web · HCI Project</span>
-                <h3>GO RIDE — AI-Assisted Ride Booking</h3>
-                <p>
-                  An end-to-end ride-booking experience with an integrated AI assistant — designed for two distinct user roles (driver &amp; passenger) across mobile and web. Every screen was crafted to keep the flow effortless, from onboarding to checkout.
-                </p>
+          {/* Case Study 01 — GO RIDE */}
+          <div className="case-study">
+            <div className="uiux-banner">
+              <div className="uiux-banner-top">
+                <div>
+                  <span className="uiux-tag">Case Study 01 · Mobile + Web · HCI</span>
+                  <h3>GO RIDE — AI-Assisted Ride Booking</h3>
+                  <p>
+                    An end-to-end ride-booking experience with an integrated AI assistant — designed for two distinct user roles (driver &amp; passenger) across mobile and web. Every screen was crafted to keep the flow effortless, from onboarding to checkout.
+                  </p>
+                </div>
+                <a className="figma-btn" href="https://www.figma.com/design/EbZrBez1bkJWGbhpwN9eXn/ride-booking-with-Ai-assistance?node-id=0-1" target="_blank" rel="noreferrer">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M5 3h14v18l-7-4-7 4z"/></svg>
+                  Open in Figma
+                </a>
               </div>
-              <a className="figma-btn" href="https://www.figma.com/design/EbZrBez1bkJWGbhpwN9eXn/ride-booking-with-Ai-assistance?node-id=0-1" target="_blank" rel="noreferrer">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M5 3h14v18l-7-4-7 4z"/></svg>
-                Open in Figma
-              </a>
+            </div>
+
+            <div className="process-row">
+              {[
+                ["01","Research","Interviewed riders & drivers to map pain points around safety, fare clarity and trip booking."],
+                ["02","Wireframes","Low-fi flows for both roles — passenger booking, courier, groceries, and driver dashboards."],
+                ["03","Visual Design","A friendly purple system with strong contrast, large tap targets, and a consistent icon language."],
+                ["04","Prototype","Interactive Figma prototype covering 30+ screens across mobile and a responsive web companion."],
+              ].map(([n,t,d]) => (
+                <div key={n} className="process-step">
+                  <div className="step-num">{n}</div>
+                  <div className="step-title">{t}</div>
+                  <div className="step-text">{d}</div>
+                </div>
+              ))}
+            </div>
+
+            <div className="screens-label">High-Fidelity Prototype · Mobile</div>
+            <div className="screens-strip">
+              <div className="screens-track">
+                {goRideScreens.map((s) => (
+                  <div key={s.src} className="phone-frame">
+                    <div className="phone-screen">
+                      <img src={s.src} alt={s.title} loading="lazy" />
+                    </div>
+                    <div className="phone-caption"><strong>{s.title}</strong>{s.caption}</div>
+                  </div>
+                ))}
+                <div className="web-frame">
+                  <div className="web-screen">
+                    <img src="/goride/12-web-landing.jpg" alt="Web Companion" loading="lazy" />
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
 
-          <div className="process-row">
-            {[
-              ["01","Research","Interviewed riders & drivers to map pain points around safety, fare clarity and trip booking."],
-              ["02","Wireframes","Low-fi flows for both roles — passenger booking, courier, groceries, and driver dashboards."],
-              ["03","Visual Design","A friendly purple system with strong contrast, large tap targets, and a consistent icon language."],
-              ["04","Prototype","Interactive Figma prototype covering 30+ screens across mobile and a responsive web companion."],
-            ].map(([n,t,d]) => (
-              <div key={n} className="process-step">
-                <div className="step-num">{n}</div>
-                <div className="step-title">{t}</div>
-                <div className="step-text">{d}</div>
+          {/* Case Study 02 — Lumen */}
+          <div className="case-study">
+            <div className="uiux-banner lumen">
+              <div className="uiux-banner-top">
+                <div>
+                  <span className="uiux-tag case-tag-lumen">Case Study 02 · Mobile · Concept</span>
+                  <h3>Lumen — A Mindful Reading Companion</h3>
+                  <p>
+                    A self-initiated concept exploring how a reading app can feel calm rather than gamified. Warm, paper-inspired tones, a focused timer, and gentle insights — built to encourage the habit, not chase the streak.
+                  </p>
+                </div>
               </div>
-            ))}
-          </div>
+            </div>
 
-          <div className="screens-label">Selected Screens</div>
-          <div className="screens-gallery">
-            {goRideScreens.map((s) => (
-              <div key={s.src} className="screen-card">
-                <img src={s.src} alt={s.label} className="screen-img" loading="lazy" />
-                <div className="screen-label">{s.label}</div>
+            <div className="process-row">
+              {[
+                ["01","Discovery","Studied existing reading apps to find what felt noisy: streak guilt, social pressure, cluttered libraries."],
+                ["02","Concept","Defined a calmer principle — fewer numbers, more reflection. Designed for a quiet evening, not a leaderboard."],
+                ["03","Visual Language","Cream paper background, terracotta as the single warm accent, and a friendly serif/sans pairing for warmth."],
+                ["04","Prototype","Six high-fidelity screens covering onboarding, library, sessions, and gentle weekly insights."],
+              ].map(([n,t,d]) => (
+                <div key={n} className="process-step">
+                  <div className="step-num">{n}</div>
+                  <div className="step-title">{t}</div>
+                  <div className="step-text">{d}</div>
+                </div>
+              ))}
+            </div>
+
+            <div className="screens-label">High-Fidelity Prototype · Mobile</div>
+            <div className="screens-strip">
+              <div className="screens-track">
+                {lumenScreens.map((s) => (
+                  <div key={s.src} className="phone-frame">
+                    <div className="phone-screen">
+                      <img src={s.src} alt={s.title} loading="lazy" />
+                    </div>
+                    <div className="phone-caption"><strong>{s.title}</strong>{s.caption}</div>
+                  </div>
+                ))}
               </div>
-            ))}
-            <div className="screen-card">
-              <img src="/goride/12-web-landing.jpg" alt="Web Landing" className="screen-img web" loading="lazy" />
-              <div className="screen-label">Web Companion</div>
             </div>
           </div>
         </div>
@@ -435,9 +513,15 @@ function Portfolio() {
             </div>
             <div className="timeline-item">
               <div className="timeline-dot" />
-              <div className="timeline-date">Earlier</div>
-              <div className="timeline-degree">Pre-Engineering, FSc</div>
-              <div className="timeline-school">Foundation in mathematics, physics &amp; computing</div>
+              <div className="timeline-date">Pre-University</div>
+              <div className="timeline-degree">FSc Pre-Medical · A* Grade</div>
+              <div className="timeline-school">Foundation in biology, chemistry &amp; physics</div>
+            </div>
+            <div className="timeline-item">
+              <div className="timeline-dot" />
+              <div className="timeline-date">Secondary</div>
+              <div className="timeline-degree">Matriculation · A* Grade</div>
+              <div className="timeline-school">DHA Senior School for Girls</div>
             </div>
           </div>
         </div>
@@ -454,11 +538,10 @@ function Portfolio() {
             <p style={{ color: "var(--text-muted)" }}>
               Got a project in mind, or just want to say hi? My inbox is always open.
             </p>
-            <a className="contact-email" href="mailto:fatima.khizer@example.com">fatima.khizer@example.com</a>
+            <a className="contact-email" href="mailto:s.fatimakhizer@gmail.com">s.fatimakhizer@gmail.com</a>
             <div className="contact-links">
-              <a className="contact-link" href="#" target="_blank" rel="noreferrer">GitHub</a>
-              <a className="contact-link" href="#" target="_blank" rel="noreferrer">LinkedIn</a>
-              <a className="contact-link" href="https://www.figma.com/" target="_blank" rel="noreferrer">Figma</a>
+              <a className="contact-link" href="https://github.com/sayyedaFatimakhizer" target="_blank" rel="noreferrer">GitHub</a>
+              <a className="contact-link" href="https://github.com/sayyedaFatimakhizer" target="_blank" rel="noreferrer">LinkedIn</a>
             </div>
           </div>
         </div>
