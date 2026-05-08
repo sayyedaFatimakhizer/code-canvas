@@ -411,10 +411,6 @@ function Portfolio() {
                     An end-to-end ride-booking experience with an integrated AI assistant — designed for two distinct user roles (driver &amp; passenger) across mobile and web. Every screen was crafted to keep the flow effortless, from onboarding to checkout.
                   </p>
                 </div>
-                <a className="figma-btn" href="https://www.figma.com/design/EbZrBez1bkJWGbhpwN9eXn/ride-booking-with-Ai-assistance?node-id=0-1" target="_blank" rel="noreferrer">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M5 3h14v18l-7-4-7 4z"/></svg>
-                  Open in Figma
-                </a>
               </div>
             </div>
 
