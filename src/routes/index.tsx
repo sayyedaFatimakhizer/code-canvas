@@ -270,6 +270,12 @@ function Portfolio() {
             <a href="#projects" className="btn-primary">View My Work</a>
             <a href="#contact" className="btn-outline">Get in Touch</a>
           </div>
+          <div className="hero-motto">
+            <span>Design</span><i className="dot" />
+            <span>Build</span><i className="dot" />
+            <span>Refactor</span><i className="dot" />
+            <span>Repeat</span>
+          </div>
           <div className="hero-scroll"><div className="scroll-line" />Scroll</div>
         </div>
       </section>
