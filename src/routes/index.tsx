@@ -135,9 +135,9 @@ html{scroll-behavior:smooth}
 .web-screen{width:100%;aspect-ratio:16/10;border-radius:8px;overflow:hidden;background:#fff;margin-top:14px}
 .web-screen img{width:100%;height:100%;object-fit:cover;display:block}
 .case-study + .case-study{margin-top:6rem;padding-top:6rem;border-top:1px solid var(--glass-border)}
-.case-tag-lumen{background:rgba(255,140,90,.12);border-color:rgba(255,140,90,.35);color:#ffb088}
-.uiux-banner.lumen{background:linear-gradient(135deg,rgba(80,30,10,.6),rgba(255,140,90,.18));border-color:rgba(255,140,90,.3)}
-.uiux-banner.lumen::before{background:radial-gradient(circle,rgba(255,140,90,.12),transparent 70%)}
+.case-tag-nutrinest{background:rgba(143,185,150,.14);border-color:rgba(143,185,150,.4);color:#a8d4af}
+.uiux-banner.nutrinest{background:linear-gradient(135deg,rgba(20,40,25,.7),rgba(143,185,150,.18));border-color:rgba(143,185,150,.3)}
+.uiux-banner.nutrinest::before{background:radial-gradient(circle,rgba(143,185,150,.14),transparent 70%)}
 #education{padding:7rem 0;background:var(--bg2)}
 .timeline{position:relative;padding-left:2rem;max-width:780px;margin:0 auto}
 .timeline::before{content:'';position:absolute;left:0;top:10px;bottom:10px;width:2px;background:linear-gradient(to bottom,var(--purple),var(--cyan),transparent)}
