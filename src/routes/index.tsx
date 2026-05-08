@@ -546,6 +546,8 @@ function Portfolio() {
           </div>
         </div>
       </section>
+
+      <footer>
         © {new Date().getFullYear()} <span>Sayyeda Fatima Khizer Mufti</span> — Designed &amp; built with care.
       </footer>
     </div>
