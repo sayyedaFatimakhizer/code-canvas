@@ -213,19 +213,24 @@ const skills = [
 const goRideScreens = [
   { src: "/goride/01-splash.jpg", title: "Splash", caption: "Brand intro" },
   { src: "/goride/02-role.jpg", title: "Role Select", caption: "Driver or rider" },
+  { src: "/goride/03-login.jpg", title: "Login", caption: "Quick sign-in" },
+  { src: "/goride/04-signup.jpg", title: "Sign Up", caption: "New account" },
   { src: "/goride/05-rides.jpg", title: "Available Rides", caption: "Live booking" },
   { src: "/goride/06-services.jpg", title: "Services", caption: "Multi-service hub" },
+  { src: "/goride/07-citytocity.jpg", title: "City to City", caption: "Long-distance trips" },
+  { src: "/goride/08-groceries.jpg", title: "Groceries", caption: "On-demand delivery" },
+  { src: "/goride/09-profile.jpg", title: "Profile", caption: "Account & trips" },
   { src: "/goride/10-safety.jpg", title: "Safety", caption: "Trip safeguards" },
   { src: "/goride/11-aichat.jpg", title: "AI Assistant", caption: "Conversational help" },
 ];
 
-const lumenScreens = [
-  { src: "/lumen/01-welcome.jpg", title: "Onboarding", caption: "Set the tone" },
-  { src: "/lumen/02-library.jpg", title: "Library", caption: "Personal shelf" },
-  { src: "/lumen/03-detail.jpg", title: "Book Detail", caption: "Start a session" },
-  { src: "/lumen/04-timer.jpg", title: "Reading Timer", caption: "Focused mode" },
-  { src: "/lumen/05-stats.jpg", title: "Insights", caption: "Weekly progress" },
-  { src: "/lumen/06-profile.jpg", title: "Profile", caption: "Goals & badges" },
+const nutriNestScreens = [
+  { src: "/nutrinest/01-splash.jpg", title: "Splash", caption: "First impression" },
+  { src: "/nutrinest/02-onboarding.jpg", title: "Onboarding", caption: "Personalized plans" },
+  { src: "/nutrinest/03-meal-detail.jpg", title: "Meal Detail", caption: "Recipe & nutrition" },
+  { src: "/nutrinest/04-planner.jpg", title: "Meal Planner", caption: "Weekly schedule" },
+  { src: "/nutrinest/05-progress.jpg", title: "Progress", caption: "Insights & habits" },
+  { src: "/nutrinest/06-profile.jpg", title: "Profile", caption: "Goals & preferences" },
 ];
 
 function Portfolio() {
