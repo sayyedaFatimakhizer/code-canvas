@@ -449,10 +449,10 @@ function Portfolio() {
               ))}
             </div>
 
-            <div className="screens-label">High-Fidelity Prototype · Mobile</div>
+            <div className="screens-label">High-Fidelity Prototype · Mobile App ({goRideAppScreens.length} screens)</div>
             <div className="screens-strip">
               <div className="screens-track">
-                {goRideScreens.map((s) => (
+                {goRideAppScreens.map((s) => (
                   <div key={s.src} className="phone-frame">
                     <div className="phone-screen">
                       <img src={s.src} alt={s.title} loading="lazy" />
@@ -460,11 +460,20 @@ function Portfolio() {
                     <div className="phone-caption"><strong>{s.title}</strong>{s.caption}</div>
                   </div>
                 ))}
-                <div className="web-frame">
-                  <div className="web-screen">
-                    <img src="/goride/12-web-landing.jpg" alt="Web Companion" loading="lazy" />
+              </div>
+            </div>
+
+            <div className="screens-label screens-label-sub">Responsive Web Companion ({goRideWebScreens.length} screens)</div>
+            <div className="screens-strip">
+              <div className="screens-track">
+                {goRideWebScreens.map((s) => (
+                  <div key={s.src} className="web-frame">
+                    <div className="web-screen">
+                      <img src={s.src} alt={s.title} loading="lazy" />
+                    </div>
+                    <div className="web-caption"><strong>{s.title}</strong>{s.caption}</div>
                   </div>
-                </div>
+                ))}
               </div>
             </div>
           </div>
