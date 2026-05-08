@@ -117,14 +117,27 @@ html{scroll-behavior:smooth}
 .step-num{font-family:'Syne',sans-serif;font-size:2.5rem;font-weight:800;color:rgba(124,58,237,.25);line-height:1;margin-bottom:.8rem}
 .step-title{font-family:'Syne',sans-serif;font-weight:700;font-size:.9rem;color:var(--cyan);margin-bottom:.6rem;letter-spacing:.5px}
 .step-text{color:var(--text-muted);font-size:.85rem;line-height:1.7}
-.screens-label{font-family:'Syne',sans-serif;font-weight:700;font-size:1.1rem;color:var(--text);margin-bottom:1.5rem;display:flex;align-items:center;gap:.8rem}
+.screens-label{font-family:'Syne',sans-serif;font-weight:700;font-size:1.1rem;color:var(--text);margin-bottom:1.8rem;display:flex;align-items:center;gap:.8rem}
 .screens-label::after{content:'';flex:1;height:1px;background:var(--glass-border)}
-.screens-gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:1.2rem}
-.screen-card{background:var(--card);border:1px solid var(--glass-border);border-radius:16px;overflow:hidden;transition:border-color .3s,transform .3s,box-shadow .3s}
-.screen-card:hover{border-color:var(--cyan);transform:translateY(-4px);box-shadow:0 16px 50px rgba(0,229,255,.15)}
-.screen-img{width:100%;aspect-ratio:9/16;object-fit:cover;background:#fff;display:block}
-.screen-img.web{aspect-ratio:16/10;object-fit:contain;background:#fff;padding:.5rem}
-.screen-label{padding:.7rem 1rem;font-size:.78rem;font-weight:500;color:var(--text-muted);background:rgba(8,4,15,.8)}
+.screens-strip{position:relative;margin:0 -2rem;padding:1rem 2rem 2rem;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:thin;scrollbar-color:var(--purple) transparent}
+.screens-strip::-webkit-scrollbar{height:6px}
+.screens-strip::-webkit-scrollbar-thumb{background:linear-gradient(90deg,var(--purple),var(--cyan));border-radius:3px}
+.screens-track{display:flex;gap:1.8rem;padding-bottom:.5rem;width:max-content}
+.phone-frame{position:relative;width:220px;flex-shrink:0;scroll-snap-align:start;border-radius:32px;padding:10px;background:linear-gradient(145deg,#1a0f30,#08040f);border:1px solid var(--glass-border);box-shadow:0 24px 60px rgba(0,0,0,.5),0 0 0 1px rgba(124,58,237,.15);transition:transform .35s ease,box-shadow .35s ease,border-color .35s ease}
+.phone-frame:hover{transform:translateY(-8px);border-color:var(--cyan);box-shadow:0 32px 70px rgba(0,229,255,.18),0 0 0 1px rgba(0,229,255,.3)}
+.phone-frame::before{content:'';position:absolute;top:18px;left:50%;transform:translateX(-50%);width:60px;height:6px;background:#000;border-radius:0 0 8px 8px;z-index:2}
+.phone-screen{position:relative;width:100%;aspect-ratio:9/19.5;border-radius:24px;overflow:hidden;background:#0a0510;display:block}
+.phone-screen img{width:100%;height:100%;object-fit:cover;display:block}
+.phone-caption{margin-top:.9rem;font-size:.78rem;font-weight:500;color:var(--text-muted);text-align:center;letter-spacing:.3px}
+.phone-caption strong{color:var(--text);font-weight:600;display:block;margin-bottom:.15rem;font-family:'Syne',sans-serif}
+.web-frame{position:relative;width:480px;flex-shrink:0;scroll-snap-align:start;border-radius:14px;padding:8px 8px 14px;background:linear-gradient(145deg,#1a0f30,#08040f);border:1px solid var(--glass-border);box-shadow:0 24px 60px rgba(0,0,0,.5)}
+.web-frame::before{content:'● ● ●';position:absolute;top:6px;left:14px;color:rgba(255,255,255,.25);font-size:8px;letter-spacing:3px}
+.web-screen{width:100%;aspect-ratio:16/10;border-radius:8px;overflow:hidden;background:#fff;margin-top:14px}
+.web-screen img{width:100%;height:100%;object-fit:cover;display:block}
+.case-study + .case-study{margin-top:6rem;padding-top:6rem;border-top:1px solid var(--glass-border)}
+.case-tag-lumen{background:rgba(255,140,90,.12);border-color:rgba(255,140,90,.35);color:#ffb088}
+.uiux-banner.lumen{background:linear-gradient(135deg,rgba(80,30,10,.6),rgba(255,140,90,.18));border-color:rgba(255,140,90,.3)}
+.uiux-banner.lumen::before{background:radial-gradient(circle,rgba(255,140,90,.12),transparent 70%)}
 #education{padding:7rem 0;background:var(--bg2)}
 .timeline{position:relative;padding-left:2rem;max-width:780px;margin:0 auto}
 .timeline::before{content:'';position:absolute;left:0;top:10px;bottom:10px;width:2px;background:linear-gradient(to bottom,var(--purple),var(--cyan),transparent)}
