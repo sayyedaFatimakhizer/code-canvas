@@ -72,14 +72,18 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
+      { title: "sayyedafatima-portfolio" },
+      { name: "description", content: "A Software Engineering student passionate about UI/UX design, focused on creating simple, user-centered, and meaningful digital experiences." },
       { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { property: "og:title", content: "sayyedafatima-portfolio" },
+      { property: "og:description", content: "A Software Engineering student passionate about UI/UX design, focused on creating simple, user-centered, and meaningful digital experiences." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:title", content: "sayyedafatima-portfolio" },
+      { name: "twitter:description", content: "A Software Engineering student passionate about UI/UX design, focused on creating simple, user-centered, and meaningful digital experiences." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/1c0acd62-a80a-4d97-af64-d05a8476d119/id-preview-63729f35--9d4a45ec-61a0-4134-bb2d-78f959cbf6fc.lovable.app-1778314828430.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/1c0acd62-a80a-4d97-af64-d05a8476d119/id-preview-63729f35--9d4a45ec-61a0-4134-bb2d-78f959cbf6fc.lovable.app-1778314828430.png" },
     ],
     links: [
       {
